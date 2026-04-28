@@ -1,1 +1,0 @@
-# ghi-la.github.io
