@@ -1,0 +1,74 @@
+/* ==========================================================================
+   THEME VARIABLES
+   Everything you'd want to restyle lives here. Change a value, save, done —
+   nothing else in the CSS needs to be touched.
+   ========================================================================== */
+
+:root {
+  /* ---- Core palette -----------------------------------------------------
+     Default theme: dark, moody, "racing at night". Swap --color-accent for
+     a quick personality change (try a blue #3d7bff, green #2fd67a, or
+     purple #a855f7) — everything (links, buttons, highlights) follows it. */
+  --color-bg: #0b0c0e;            /* page background */
+  --color-bg-alt: #101216;        /* alternating section background */
+  --color-surface: #16181d;       /* cards, panels */
+  --color-surface-hover: #1c1f26; /* card hover state */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+
+  --color-text: #f2f2f0;          /* primary text */
+  --color-text-muted: #9aa0a6;    /* secondary text */
+  --color-text-faint: #6b7076;    /* tertiary / labels */
+
+  --color-accent: #ff3d24;        /* primary accent — racing red/orange */
+  --color-accent-2: #ffb703;      /* secondary accent — used sparingly */
+  --color-accent-contrast: #0b0c0e; /* text color placed ON TOP of accent */
+
+  /* ---- Typography --------------------------------------------------------
+     Heading font has personality; body font stays readable at small sizes. */
+  --font-heading: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --fs-base: 16px;
+  --lh-base: 1.6;
+
+  /* ---- Layout -------------------------------------------------------------- */
+  --container-width: 1120px;
+  --container-padding: 24px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* ---- Motion -------------------------------------------------------------- */
+  --transition-fast: 150ms ease;
+  --transition-base: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ---- Shadows --------------------------------------------------------- */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.36);
+  --shadow-accent: 0 8px 24px rgba(255, 61, 36, 0.25);
+}
+
+/* ---------------------------------------------------------------------------
+   Optional: light theme.
+   To use it, either replace the block above, or add class="theme-light" to
+   <html> in index.html and keep this block as-is.
+   --------------------------------------------------------------------------- */
+html.theme-light {
+  --color-bg: #fbfaf8;
+  --color-bg-alt: #f2f1ee;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f5f4f1;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-strong: rgba(0, 0, 0, 0.14);
+
+  --color-text: #16181d;
+  --color-text-muted: #52565c;
+  --color-text-faint: #7a7f86;
+
+  --color-accent-contrast: #fbfaf8;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.1);
+}

@@ -1,150 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matteo Ghilardini</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <meta name="description" content="Matteo Ghilardini — Computer Science undergrad building software and automations, into cars, motorcycles, and photography." />
+  <meta name="theme-color" content="#0b0c0e" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Matteo Ghilardini" />
+  <meta property="og:description" content="Computer Science undergrad building software and automations, into cars, motorcycles, and photography." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a class="nav-logo" href="#hero">MG</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#photography">Photography</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="nav-logo">MG<span class="dot">.</span></a>
 
-  <!-- HERO -->
-  <section id="hero">
-    <p class="hero-tag">Based in Ticino, Switzerland</p>
-    <h1>Hi, I'm Matteo<br>Ghilardini.</h1>
-    <p class="hero-sub">
-      Software & Data Engineering student at USI. I build web apps and spend free time chasing cars with a camera.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#portfolio">See my work</a>
-      <a class="btn btn-ghost" href="https://github.com/ghi-la" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.42 7.88 10.95.58.1.79-.25.79-.55v-2.1c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.07.79 2.15v3.19c0 .3.2.66.8.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-        </svg>
-        GitHub
-      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-  </section>
+  </header>
 
-  <hr class="divider" />
+  <main id="top">
 
-  <!-- ABOUT -->
-  <section id="about">
-    <p class="section-label">About me</p>
-    <h2>Background</h2>
-    <p class="section-desc">A quick snapshot of where I come from and what I'm working towards.</p>
+    <!-- ============================= HERO ============================= -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <p class="hero-kicker"><span class="blink" aria-hidden="true"></span>MATTEO GHILARDINI — COMPUTER SCIENCE</p>
 
-    <div class="about-grid">
-      <div class="about-card">
-        <div class="label">Degree</div>
-        <div class="value">BSc Informatics</div>
-      </div>
-      <div class="about-card">
-        <div class="label">Currently enrolled in</div>
-        <div class="value">MSc Software & Data Engineering</div>
-      </div>
-      <div class="about-card">
-        <div class="label">Location</div>
-        <div class="value">Ticino, Switzerland</div>
-      </div>
-      <div class="about-card">
-        <div class="label">GitHub</div>
-        <div class="value">
-          <a href="https://github.com/ghi-la" target="_blank" rel="noopener"
-            style="color: var(--accent); text-decoration: none;">github.com/ghi-la</a>
+        <h1 class="hero-title">
+          I build things with code, then go find something fast to <span class="accent">photograph</span>.
+        </h1>
+
+        <div class="hero-stripe" aria-hidden="true"></div>
+
+        <p class="hero-subtitle">
+          Computer Science undergrad who's happiest either shipping a clean bit of software or out
+          chasing good light with a camera — bonus points if there's an engine involved.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="mailto:matteo.ghilardini@gmail.com" class="btn btn-ghost">Get in touch</a>
+        </div>
+
+        <div class="hero-meta">
+          <div>
+            <span class="value">Software &amp; Automation</span>
+            <span class="label">Focus</span>
+          </div>
+          <div>
+            <span class="value">Cars · Bikes · Photography</span>
+            <span class="label">Also into</span>
+          </div>
+          <div>
+            <span class="value">Open to interesting projects</span>
+            <span class="label">Status</span>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- ============================= ABOUT ============================= -->
+    <section id="about" class="section-alt">
+      <div class="container">
+        <p class="section-label" data-reveal>01 — About</p>
+        <h2 class="section-title" data-reveal>A bit about me</h2>
+
+        <div class="about-grid">
+          <div class="about-text" data-reveal>
+            <p>
+              I'm a <strong>Computer Science undergraduate</strong> with a habit of turning ideas into working
+              software — whether that's a sleek app, a clever automation, or a script that quietly saves
+              someone an afternoon of manual work.
+            </p>
+            <p>
+              When I'm not at the keyboard, I'm usually somewhere with an engine or a lens nearby. Cars and
+              motorcycles taught me to care about precision and design that holds up under pressure;
+              photography taught me patience and the value of a good composition — both have a way of
+              sneaking into how I approach code.
+            </p>
+            <p>
+              I'm always exploring new tech and tinkering with side projects. This page collects a few of
+              them — more get added as I build.
+            </p>
+          </div>
+
+          <div class="about-stack" data-reveal>
+            <div class="stack-group">
+              <h3>Languages</h3>
+              <div class="chip-row">
+                <span class="chip">C</span>
+                <span class="chip">C++</span>
+                <span class="chip">C#</span>
+                <span class="chip">Java</span>
+                <span class="chip">Python</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">PHP</span>
+                <span class="chip">R</span>
+              </div>
+            </div>
+
+            <div class="stack-group">
+              <h3>Frameworks &amp; Libraries</h3>
+              <div class="chip-row">
+                <span class="chip">React</span>
+                <span class="chip">Next.js</span>
+                <span class="chip">Node.js</span>
+                <span class="chip">Express</span>
+                <span class="chip">FastAPI</span>
+                <span class="chip">Spring</span>
+                <span class="chip">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div class="stack-group">
+              <h3>Data &amp; Cloud</h3>
+              <div class="chip-row">
+                <span class="chip">MySQL</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">MS SQL Server</span>
+                <span class="chip">AWS</span>
+                <span class="chip">Azure</span>
+                <span class="chip">Docker</span>
+              </div>
+            </div>
+
+            <div class="stack-group">
+              <h3>Tools</h3>
+              <div class="chip-row">
+                <span class="chip">Git</span>
+                <span class="chip">GitHub</span>
+                <span class="chip">Figma</span>
+                <span class="chip">Postman</span>
+                <span class="chip">Notion</span>
+                <span class="chip">Adobe Lightroom</span>
+                <span class="chip">Arduino</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= INTERESTS ============================= -->
+    <section id="interests">
+      <div class="container">
+        <p class="section-label" data-reveal>02 — Beyond the screen</p>
+        <h2 class="section-title" data-reveal>What I'm into</h2>
+        <p class="section-intro" data-reveal>
+          The things that pull me away from the keyboard tend to sneak back into how I think about
+          building software.
+        </p>
+
+        <div class="interests-grid">
+          <div class="interest-card" data-reveal>
+            <div class="interest-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm14 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3 17V9.5a1 1 0 0 1 .3-.7l3-3A1 1 0 0 1 7 5.5h8.5a1 1 0 0 1 .9.55L18.5 9H21a1 1 0 0 1 1 1v7"/>
+                <path d="M3 12h18"/>
+              </svg>
+            </div>
+            <h3>Cars</h3>
+            <p>
+              From daily-driver quirks to weekend track dreams — I geek out over design, engineering
+              trade-offs, and the sound of a good exhaust note.
+            </p>
+          </div>
+
+          <div class="interest-card" data-reveal>
+            <div class="interest-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="5.5" cy="17.5" r="3.5"/>
+                <circle cx="18.5" cy="17.5" r="3.5"/>
+                <path d="M12 17.5H9l-1-5h9l2.5 5M8 12.5 10 7h3l1.5 3M10 7H7"/>
+              </svg>
+            </div>
+            <h3>Motorcycles</h3>
+            <p>
+              Two wheels, zero distractions. I like the mechanical honesty of motorcycles — everything is
+              exposed, nothing is hidden.
+            </p>
+          </div>
+
+          <div class="interest-card" data-reveal>
+            <div class="interest-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2Z"/>
+                <circle cx="12" cy="13" r="4"/>
+              </svg>
+            </div>
+            <h3>Photography</h3>
+            <p>
+              Mostly automotive and street shots. I like chasing good light almost as much as I like
+              chasing a clean commit history.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= PROJECTS ============================= -->
+    <section id="projects" class="section-alt">
+      <div class="container">
+        <p class="section-label" data-reveal>03 — Projects</p>
+        <h2 class="section-title" data-reveal>Things I've built</h2>
+        <p class="section-intro" data-reveal>
+          A running log of projects I'm building or have shipped. This list only grows — add new entries
+          in <code>js/projects-data.js</code> and they'll show up here automatically.
+        </p>
+
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============================= CONTACT ============================= -->
+    <section id="contact">
+      <div class="container contact-panel">
+        <p class="section-label" data-reveal>04 — Contact</p>
+        <h2 class="section-title" data-reveal>Let's build something</h2>
+        <p class="section-intro" data-reveal>
+          Got a project, an opportunity, or just want to talk cars and cameras? My inbox is open.
+        </p>
+
+        <div class="contact-actions" data-reveal>
+          <a href="mailto:matteo.ghilardini@gmail.com" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-10 6L2 7"/>
+            </svg>
+            Say hello
+          </a>
+        </div>
+
+        <div class="social-row" data-reveal>
+          <a class="social-link" href="https://github.com/ghi-la" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+          </a>
+          <a class="social-link" href="https://linkedin.com/in/matteo-ghilardini" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+          </a>
+          <a class="social-link" href="https://instagram.com/matteo.ghila" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>&copy; <span id="year"></span> Matteo Ghilardini</span>
+      <a href="#top">Back to top ↑</a>
     </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
-    <p class="section-label">Portfolio</p>
-    <h2>Web App Projects</h2>
-    <p class="section-desc">Things I've built. More coming soon.</p>
-
-    <div class="projects-grid">
-
-      <div class="empty-card">
-        <span>🚀</span>
-        Projects coming soon
-      </div>
-
-      <div class="empty-card">
-        <span>⚡</span>
-        Work in progress
-      </div>
-
-      <div class="empty-card">
-        <span>🔧</span>
-        Stay tuned
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- PHOTOGRAPHY -->
-  <section id="photography">
-    <p class="section-label">Passion</p>
-    <h2>Car Photography</h2>
-    <p class="photo-intro">
-      Beyond code, I love finding beauty in machines. Drop your favorite shots here.
-    </p>
-
-    <div class="photo-grid">
-      <div class="photo-slot">
-        <span class="placeholder-icon">📷</span>
-        <span>Add photo</span>
-      </div>
-      <div class="photo-slot">
-        <span class="placeholder-icon">📷</span>
-        <span>Add photo</span>
-      </div>
-      <div class="photo-slot">
-        <span class="placeholder-icon">📷</span>
-        <span>Add photo</span>
-      </div>
-      <div class="photo-slot">
-        <span class="placeholder-icon">📷</span>
-        <span>Add photo</span>
-      </div>
-      <div class="photo-slot">
-        <span class="placeholder-icon">📷</span>
-        <span>Add photo</span>
-      </div>
-      <div class="photo-slot">
-        <span class="placeholder-icon">📷</span>
-        <span>Add photo</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Matteo Ghilardini &nbsp;·&nbsp;
-      <a href="https://github.com/ghi-la" target="_blank" rel="noopener">GitHub</a>
-    </p>
   </footer>
 
-  <script src="script.js"></script>
-
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
